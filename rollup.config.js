@@ -14,17 +14,17 @@ export default {
         'react-router-dom'
     ],
     plugins: [
-        resolve({
-            // 将自定义选项传递给解析插件
-            customResolveOptions: {
-                moduleDirectory: 'node_modules'
-            }
-        }),
         babel({
             exclude: 'node_modules/**'
         }),
         typescript({
             useTsconfigDeclarationDir: true
+        }),
+        resolve({
+            // 将自定义选项传递给解析插件
+            customResolveOptions: {
+                moduleDirectory: 'node_modules'
+            }
         })
     ]
 }
