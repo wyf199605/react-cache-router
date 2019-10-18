@@ -1,0 +1,44 @@
+{
+  "name": "react-cache-router",
+  "version": "1.0.0",
+  "description": "实现react-router的keep-alive功能",
+  "main": "index.js",
+  "typings": "types/index.d.ts",
+  "scripts": {
+    "build": "rollup --config",
+    "declaration": "tsc --declaration"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wyf199605/react-cache-router.git"
+  },
+  "keywords": [
+    "react-router",
+    "react-cache-router",
+    "react-keep-alive-router",
+    "cahce"
+  ],
+  "author": "wyf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wyf199605/react-cache-router/issues"
+  },
+  "homepage": "https://github.com/wyf199605/react-cache-router#readme",
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-router-dom": ">=4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.9",
+    "@types/react-router-dom": "^5.1.0",
+    "jest": "^24.9.0",
+    "react": "^16.10.2",
+    "react-router-dom": "^5.1.2",
+    "rollup": "^1.24.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-typescript2": "^0.24.3",
+    "typescript": "^3.6.4"
+  }
+}
