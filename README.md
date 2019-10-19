@@ -21,7 +21,7 @@ yarn add react-cache-router
 
 `react-cache-router`就是为了实现`react-router`的`keep-alive`功能。
 
-[DEMO演示](https://on6fg.csb.app/#/home)
+<a href="https://on6fg.csb.app/#/home" target="_blank">DEMO演示</a>
 
 ## 实现原理
 
