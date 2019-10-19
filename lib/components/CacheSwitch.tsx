@@ -64,10 +64,10 @@ export class CacheSwitch extends React.Component<CacheSwitchProps>{
                     if(!Array.isArray(paths)){
                         paths = [paths || ''];
                     }
-                    let key = paths.join(',') || index;
+                    let key = paths.join(',');
 
                     if(child.type["displayName"] === "CacheRoute"){
-                        let cacheRoute = cacheManager.get(currentPath);
+                        let cacheRoute = cacheManager.get(key);
 
                         // 未匹配或者cacheRoute存在时直接返回；
                         if(!match || cacheRoute){
@@ -75,20 +75,18 @@ export class CacheSwitch extends React.Component<CacheSwitchProps>{
                         }
 
                         cacheRoute = React.cloneElement(child, {
-                            key,
+                            key: key || index,
                             ...props
                         });
 
                         // 判断是否开启缓存
-                        if(props.cache !== false && when !== "none"){
-                            paths.forEach((path) => {
-                                cacheManager.add(path, cacheRoute, props.local);
-                            });
+                        if(key && props.cache !== false && when !== "none"){
+                            cacheManager.add(key, cacheRoute, props.local);
                         }
                         return cacheRoute;
                     }else{
                         return match ? React.cloneElement(child, {
-                            key,
+                            key: key || index,
                             ...props
                         }) : null;
                     }
