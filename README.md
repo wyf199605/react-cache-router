@@ -1,9 +1,8 @@
 # react-cache-router
 
-基于`react`v16和`react-router-dom`v4实现的路由缓存功能
+基于`react`![ReactVersion](https://img.shields.io/badge/npm-16.0.0-brightgreen)和`react-router-dom`![reactRouterVersion](https://img.shields.io/badge/npm-4.0.0-brightgreen)实现的路由缓存功能
 
-搭配`react-router-dom`v4以上进行工作
-
+搭配`react-router-dom`![reactRouterVersion](https://img.shields.io/badge/npm-4.0.0-brightgreen)以上进行工作
 ## 安装
 
 ```text
@@ -39,12 +38,15 @@ yarn add react-cache-router
 import * as React from 'react';
 import {HashRouter} from 'react-router-dom';
 import {CacheSwitch, CacheRoute} from 'react-cache-router';
+import {Home} from "./pages/home";
+import {Myself} from "./pages/myself"
 
 export class App extends React.Component{
     render(){
         return <HashRouter>
             <CacheSwitch>
-                <CacheRoute path="home" component={}/>
+                <CacheRoute exact={true} path="/home" component={Home}/>
+                <CacheRoute exact={true} path="/myself" component={Myself}/>
             </CacheSwitch>
         </HashRouter>;
     }
