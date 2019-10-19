@@ -1,3 +1,3 @@
 "use strict";
 
-module.exports = require("./dist/bundle.min");
+module.exports = require("./dist/bundle");

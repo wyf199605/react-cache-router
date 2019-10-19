@@ -23,10 +23,10 @@ class Updater extends React.Component<UpdaterProps & RouteComponentProps> {
         } = this.props;
         this.prevPath = options.location.pathname;
 
-        return React.Children.only(children)({
+        return typeof children === "function" ? children({
             currentPath: this.prevPath,
             ...options
-        });
+        }) : null;
     }
 }
 
